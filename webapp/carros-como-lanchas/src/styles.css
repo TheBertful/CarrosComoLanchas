@@ -1,35 +1,53 @@
+/*
+Cores
+#470077
+#ED7F02
+#515052
+#000000
+#FAF3DD
+https://coolors.co/faf3dd-000000-515052-ed7f02-470077
+*/
+
 /* Divisões de conteúdo */
-.menu-bar {
+
+body {
+    margin: 0
+}
+
+.bar {
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
     background-color: #470077;
     color: white;
     font-weight: 600;
+    overflow: hidden;
+}
+
+.menu-bar {
+    top: 0;
+    height: 64px;
+}
+
+.bar>*, .content>* {
+    padding: 0 16px;
 }
 
 .content {
+    margin-top: 64px;
+    margin-bottom: 48px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
+    background: url(./assets/background-images/carro-lancha-09.jpg) no-repeat center fixed #FAF3DD;
 }
 
 .bottom-bar {
-    position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #470077;
-    color: white;
-    font-weight: 600;
+    height: 48px;
 }
+
+/* Selectors em geral */
