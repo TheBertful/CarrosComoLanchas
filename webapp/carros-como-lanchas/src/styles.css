@@ -57,7 +57,7 @@ body {
     width: 100%;
     display: flex;
     overflow-y: auto;
-    background: url(./assets/background-images/carro-lancha-09.jpg) no-repeat center fixed rgba(235, 235, 235, 0.5);
+    /*background: url(./assets/background-images/carro-lancha-09.jpg) no-repeat center fixed rgba(235, 235, 235, 0.5);*/
 }
 
 .bottom-bar {

@@ -12,4 +12,10 @@ export class MenuBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public asdf(id: string) {
+    let element = document.getElementById(id) as HTMLElement;
+    console.log(element);
+    element.classList.add('current-link');
+  }
+
 }

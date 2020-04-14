@@ -8,6 +8,9 @@ import { ItemCardComponent } from './shared/components/item-card/item-card.compo
 import { GameComponent } from './content/components/game/game.component';
 import { InstructionsComponent } from './content/components/instructions/instructions.component';
 import { HomeComponent } from './content/components/home/home.component';
+import { BackgroundComponent } from './shared/components/background/background.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './content/components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { HomeComponent } from './content/components/home/home.component';
     ItemCardComponent,
     GameComponent,
     InstructionsComponent,
-    HomeComponent
+    HomeComponent,
+    BackgroundComponent,
+    ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
