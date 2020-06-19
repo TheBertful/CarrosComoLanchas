@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { Termo } from 'src/app/shared/models/termo.model';
 
 @Component({
@@ -11,6 +11,8 @@ export class GameComponent implements OnInit {
   primeiroTermo: Termo;
   segundoTermo: Termo;
 
+  wordarts = ['rainbow', 'blues', 'superhero', 'purple', 'horizon', 'italic-outline', 'slate', 'brown', 'green-3d', 'white-3d', 'redblue'];
+  isOpen: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -22,17 +24,36 @@ export class GameComponent implements OnInit {
       descricao: "Seção de comentários do Youtube",
       singular: true
     }
+    this.sortearTermos();
   }
 
   public sortearTermos() {
+    this.isOpen = false;
     this.primeiroTermo = {
-      descricao: "Feijão no dente",
+      descricao: "Exemplo",
       singular: true
     }
     this.segundoTermo = {
-      descricao: "Saci com um patinete",
+      descricao: "Exemplo que é maior pra fins de teste",
       singular: true
     }
+    this.sortearCSSCards();
+    console.log(this.isOpen);
+    this.isOpen = true;
+  }
+
+  public sortearCSSCards() {
+    this.sortearCSS('firstCard');
+    this.sortearCSS('secondCard');
+  }
+
+  private sortearCSS(id: string) {
+    let card = document.getElementById(id).getElementsByClassName('wordart').item(0) as HTMLDivElement;
+    this.wordarts.forEach(element => {
+      card.classList.remove(element);
+    });
+    let randomElement = this.wordarts[Math.floor(Math.random() * this.wordarts.length)];
+    card.classList.add(randomElement);
   }
 
 }

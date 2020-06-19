@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-center">
     <app-item-card id="firstCard" [termo]="primeiroTermo"></app-item-card>
-    <div class="item-card-separator">
-        <label class="label-card-separator">é como</label>
+    <div class="item-card-separator d-flex justify-content-center" >
+        <label class="label-card-separator">É <br> COMO</label>
     </div>
     <app-item-card id="secondCard" [termo]="segundoTermo"></app-item-card>
 </div>
-<div class="d-flex justify-content-center">
-    <button class="button-standard" (click)=sortearTermos()>Sortear</button>
+<div class="d-flex justify-content-center div-button-sorteio">
+    <button class="button-standard button-sorteio" (click)=sortearTermos()>Sortear</button>
 </div>

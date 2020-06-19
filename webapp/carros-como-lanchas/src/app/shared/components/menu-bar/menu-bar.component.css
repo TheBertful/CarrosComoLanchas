@@ -1,5 +1,5 @@
 .bg-navbar {
-    background-color: #49a078;
+    background-color: #1A535C;
 }
 
 .bar-item {
@@ -16,6 +16,6 @@
 
 .bar-item:hover {
     color: #F4E7B8;
-    border-bottom: 3px solid #F69865;
-    transition: border-bottom 0.3s, color 0.3s;
+    border-bottom: 3px solid #5A0C26;
+    transition: border-bottom 0.5s, color 0.5s;
 }
